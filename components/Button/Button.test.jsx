@@ -1,6 +1,10 @@
 import React, { createRef } from 'react';
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect, vi, afterEach } from 'vitest';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+
+afterEach(() => {
+  cleanup();
+});
 import Button from './Button';
 
 describe('Button : rendu des variantes', () => {
