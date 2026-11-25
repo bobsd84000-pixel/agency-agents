@@ -1,0 +1,27 @@
+/* États et animations du composant Button.
+   Chargé une seule fois par l'import dans Button.jsx (feuille statique, rendu serveur complet). */
+
+.ui-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.ui-btn:not([aria-disabled="true"]):hover {
+  filter: brightness(0.94);
+}
+
+.ui-btn-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: ui-btn-spin 0.75s linear infinite;
+}
+
+@keyframes ui-btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
